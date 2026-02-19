@@ -22,7 +22,7 @@ blacklist_ids = ["AAAA123456", "BBBB654321"]
 # HOME
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return jsonify({"message": "Backend is running successfully"})
 
 # STEP 1: PROFILE SUBMISSION → GENERATE OTP
 
@@ -277,3 +277,4 @@ def analytics():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
